@@ -15,7 +15,6 @@ my $CLAP = '👏';
 
 my @words = map { split( /\s+/ ) } @ARGV;
 
-print $CLAP;
-print join( $CLAP, @words );
-print $CLAP;
-print "\n";
+my $msg = $CLAP . join( $CLAP, @words ) . $CLAP;
+say $CLAP;
+`pbcopy "$msg"`;
